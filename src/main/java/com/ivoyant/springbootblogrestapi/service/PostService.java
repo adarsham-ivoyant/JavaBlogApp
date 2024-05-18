@@ -2,13 +2,14 @@ package com.ivoyant.springbootblogrestapi.service;
 
 
 import com.ivoyant.springbootblogrestapi.payload.PostDto;
+import com.ivoyant.springbootblogrestapi.payload.PostResponse;
 
 import java.util.List;
 
 public interface PostService {
     PostDto createPost(PostDto postDto);
 
-    List<PostDto> getAllPosts();
+    PostResponse getAllPosts(int pageNo, int pageSize,String sortBy,String sortdir);
 
     PostDto getPostById(long id);
 
