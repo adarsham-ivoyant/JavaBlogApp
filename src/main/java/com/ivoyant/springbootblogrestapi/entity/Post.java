@@ -2,7 +2,6 @@ package com.ivoyant.springbootblogrestapi.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,7 +9,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Builder
 @Entity
 @Table(
         name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
